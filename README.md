@@ -16,9 +16,14 @@ if you have chosen to install python 3.6 then run below commands in command prom
  3. Third party library
  
  pip install goose3
+ 
  mkvirtualenv --no-site-packages goose3
+ 
  git clone https://github.com/goose3/goose3.git
+ 
  cd goose3
+ 
  pip install -r ./requirements/python
+ 
  python setup.py install
  
