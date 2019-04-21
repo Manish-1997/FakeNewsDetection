@@ -14,7 +14,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 	<link rel="stylesheet" href="Frontpage.css">
-	
+	<link rel="stylesheet" href="css/bootstrsap.min.css">
 </head>
 <body>
 	<video autoplay muted loop id="myVideo">
@@ -24,21 +24,32 @@
 
 <div id="body" style="color: white">
 	<img src="image/d2a47bc6021db28067a973c9901d2b65.jpg" id="logo"/>
+	<span id="graph">Graphs</span>
 
 <div class="top opened">
 	<div id="msg1"></div> 
 	<span id="text_target"></span>
 	<div id="new"></div>
 	<img src="image/white-down-arrow-png-2.png"/ id="mouse">
-	</div>
+</div>
 <div class="bot closed">
+<div id="result">
+		<span>Result:</span>
+		<span>Probability:</span>
 
+	</div>
 	<form>
 
 <input type="text" name="URL" id="url" placeholder="Enter the URL" required />
-	<button class="btn btn-1 btn-1f" data-target="#myModal">test</button>
+	<button class="btn btn-1 btn-1f" data-target="#myModal" id="myBtn">test</button>
 	
 	</form>
+	
+</div>
+<div class="graph">
+	<h1 id="gh">Graphs</h1>
+	<img src="image/LR_LCurve.png" id="img1" />
+	<img src="image/RF_LCurve.png" id="img2"/>
 </div>
 
 

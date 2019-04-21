@@ -1,7 +1,11 @@
 jQuery(document).ready(function () {
 	$(".bot").hide();
+	$(".graph").hide();
+	$("#result").hide();
 	$("#logo").click(function()
 {
+	$('.graph').hide();
+	$('#graph').show();
 	$('.top').show();
         slider.classList.remove('closed');
         slider.classList.add('opened');
@@ -14,7 +18,12 @@ jQuery(document).ready(function () {
 	$("#new").empty();
    load();
 });
-
+$("#graph").click(function(){
+$('.bot').hide();
+$('.top').hide();
+$('#graph').hide();
+$('.graph').show();
+});
 	$("#mouse").click(function()
 {
 	
@@ -28,7 +37,15 @@ jQuery(document).ready(function () {
         $(".bot").show();
 
 });
-
+$('#myBtn').click(function(){
+	$("#result").show();
+	setTimeout(function(){
+    $("#result").hide();
+}, 5000);
+});
+$('#url').keyup(function(){
+	$("#result").hide();
+});
 var showText = function (target, message, index, interval) {    
   if (index < message.length) { 
     $(target).append(message[index++]); 
@@ -90,6 +107,8 @@ function toggleSlider(){
 var slider = document.querySelector('.top');
 var sliderbot = document.querySelector('.bot');
   $(document).on("mousewheel DOMMouseScroll", function(e) {
+  	$('#graph').show();
+  	$('.graph').hide();
   	var scrolling = false;
     if (!scrolling) {
       if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
@@ -119,6 +138,33 @@ var sliderbot = document.querySelector('.bot');
       }
     }
   });
+
+
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 });
   
 
