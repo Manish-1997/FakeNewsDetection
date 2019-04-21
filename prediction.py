@@ -17,14 +17,19 @@ print("You entered: " + str(var))
 def detecting_fake_news(var):    
 #retrieving the best model for prediction call
     load_model = pickle.load(open('final_model.sav', 'rb'))
-    prediction = load_model.predict([var])
-    prob = load_model.predict_proba([var])
+    url = Scrape(var)
+    data = url.cleaned_text
+    print(type(data))
+    print(type(var))
+    prediction = load_model.predict([data])
+    prob = load_model.predict_proba([data])
     HeaderBodyComp = Comparison(var)
-    print(HeaderBodyComp)
-    print(type(HeaderBodyComp))
+
+    #print(HeaderBodyComp)
+    #print(type(HeaderBodyComp))
     FinalScore = (prob[0][1] * 0.9) + (HeaderBodyComp * 0.1)
     print(FinalScore)
-    print(type(FinalScore))
+    #print(type(FinalScore))
     return (print("The given statement is ",prediction[0]),
         print("The truth probability score is ",FinalScore))
 
