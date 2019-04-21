@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Fake News Detection
 
 Fake News Detection in Python
@@ -22,6 +23,12 @@ What things you need to install the software and how to install them:
    - scipy
    
   - if you have chosen to install python 3.6 then run below commands in command prompt/terminal to install these packages
+=======
+1.Python 3.6
+
+2. #Pre-Requisites
+if you have chosen to install python 3.6 then run below commands in command prompt/terminal to install these packages
+>>>>>>> 5068ef3db50f85e24c3e31927a8c04ca907341fa
    ```
    pip install -U scikit-learn
    pip install numpy
@@ -32,6 +39,7 @@ What things you need to install the software and how to install them:
    conda install -c scikit-learn
    conda install -c anaconda numpy
    conda install -c anaconda scipy
+<<<<<<< HEAD
    ```   
 
 #### Dataset used
@@ -169,3 +177,15 @@ $ git clone https://github.com/nishitpatel01/Fake_News_Detection.git
 
     - Once you hit the enter, program will take user input (news headline) and will be used by model to classify in one of  categories of "True" and "False". Along with classifying the news headline, model will also provide a probability of truth associated with it.
 
+=======
+   
+ 3. Third party library
+ ```
+    pip install goose3
+    mkvirtualenv --no-site-packages goose3 
+    git clone https://github.com/goose3/goose3.git 
+    cd goose3 
+    pip install -r ./requirements/python 
+    python setup.py install
+ ```
+>>>>>>> 5068ef3db50f85e24c3e31927a8c04ca907341fa
